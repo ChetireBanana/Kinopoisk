@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/filmography_film_card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:id="@+id/film_poster"
+        android:layout_width="@dimen/filmography_image_width"
+        android:layout_height="@dimen/filmography_image_height"
+        android:background="@drawable/rounded_outlines"
+        android:clipToOutline="true"
+        android:contentDescription="@string/filmpage_film_poster"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/film_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/rounded_outlines"
+        android:backgroundTint="@color/white"
+        android:padding="2dp"
+        android:paddingStart="4dp"
+        android:paddingEnd="4dp"
+        android:textColor="@color/black"
+        android:textSize="6sp"
+        app:layout_constraintStart_toStartOf="@+id/film_poster"
+        app:layout_constraintTop_toTopOf="@+id/film_poster"
+        tools:ignore="SmallSp"
+        tools:text="7.8" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/film_poster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/film_poster"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/filmography_film_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/MainTextStyle"
+            tools:text="Топи" />
+
+        <TextView
+            android:id="@+id/filmography_film_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/AdditionalTextStyle"
+            tools:text="2024. драмма" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/filmography_film_card_viewed_marker"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="6dp"
+        android:contentDescription="@string/hav_seen_marker_description"
+        android:src="@drawable/icon_eye"
+        app:layout_constraintBottom_toBottomOf="@id/film_poster"
+        app:layout_constraintEnd_toEndOf="@id/film_poster"
+        app:tint="@color/white" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

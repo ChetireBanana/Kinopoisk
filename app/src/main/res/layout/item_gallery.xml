@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/item_gallery_poster"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_outlines"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:clipToOutline="true"
+        tools:src="@tools:sample/avatars"
+        tools:ignore="ContentDescription,UnusedAttribute" />
+
+</LinearLayout>

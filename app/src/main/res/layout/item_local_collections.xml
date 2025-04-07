@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/local_collection_layout"
+    android:layout_width="@dimen/local_collection_item_size"
+    android:layout_height="@dimen/local_collection_item_size"
+    android:background="@drawable/item_outline_background">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="RelativeOverlap">
+
+        <ImageView
+            android:id="@+id/local_collection_icon"
+            style="@style/ProfileCollectionsIconStyle"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/icon_heart"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/local_collection_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/smallest_gap"
+            android:textAppearance="@style/MainTextStyle"
+            tools:text="Любимое" />
+
+        <TextView
+            android:id="@+id/local_collection_size_indicator"
+            style="@style/ProfileCollectionsSizeIndicatorStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/smallest_gap"
+            tools:text="105" />
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/delete_local_collection_button"
+        style="@style/ProfileCollectionDeleteButtonStyle"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        app:icon="@drawable/icon_cross"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+</RelativeLayout>

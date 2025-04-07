@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="start_end_margin">26dp</dimen>
+    <dimen name="double_start_end_margin">52dp</dimen>
+    <dimen name="smallest_gap">8dp</dimen>
+    <dimen name="biggest_gap">40dp</dimen>
+    <dimen name="middle_gap">24dp</dimen>
+    <dimen name="small_gap">16dp</dimen>
+    <dimen name="image_width">111dp</dimen>
+    <dimen name="image_height">156dp</dimen>
+    <dimen name="filmography_image_width">96dp</dimen>
+    <dimen name="filmography_image_height">132dp</dimen>
+    <dimen name="year_item_width">80dp</dimen>
+    <dimen name="fragment_header_size">56dp</dimen>
+    <dimen name="local_collection_item_size">146dp</dimen>
+    <dimen name="add_film_to_other_collection_recycler_view_item_height">40dp</dimen>
+    <dimen name="screen_margin">16dp</dimen>
+    <dimen name="content_padding">8dp</dimen>
+    <dimen name="small_space">4dp</dimen>
+</resources>

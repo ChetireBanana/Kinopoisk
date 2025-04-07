@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/search_preferences_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/fragment_header_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_button"
+                style="@style/BackButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/start_end_margin"
+                app:icon="@drawable/icon_caret_left"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/search_preferences_title"
+                android:textAppearance="@style/ListPageTitleTextStyle" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/chose_film_type_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginTop="@dimen/small_gap"
+            android:text="@string/search_preferences_chose_film_type_title"
+            android:textAppearance="@style/AdditionalTextStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_preferences_header" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/film_types_toggle_group"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/small_gap"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chose_film_type_title"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/all_types_toggle"
+                style="@style/SearchPreferencesToggleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/search_preferences_film_type_toggle_all" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/films_types_toggle"
+                style="@style/SearchPreferencesToggleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/search_preferences_film_type_toggle_films" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/serials_types_toggle"
+                style="@style/SearchPreferencesToggleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/search_preferences_film_type_toggle_serials" />
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <RelativeLayout
+            android:id="@+id/country_preferences_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="@dimen/small_gap"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/film_types_toggle_group">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/start_end_margin"
+                android:text="@string/search_preferences_country_title"
+                android:textAppearance="@style/SearchPreferencesMainTextStyle" />
+
+            <TextView
+                android:id="@+id/country_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/start_end_margin"
+                android:textAppearance="@style/SearchPreferencesAdditionalTextStyle"
+                tools:ignore="RelativeOverlap"
+                tools:text="Россия" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/border_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/country_preferences_layout" />
+
+        <RelativeLayout
+            android:id="@+id/genre_preferences_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/border_1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/start_end_margin"
+                android:text="@string/search_preferences_genre_title"
+                android:textAppearance="@style/SearchPreferencesMainTextStyle" />
+
+            <TextView
+                android:id="@+id/genre_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/start_end_margin"
+                android:textAppearance="@style/SearchPreferencesAdditionalTextStyle"
+                tools:ignore="RelativeOverlap"
+                tools:text="Камедия" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/border_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/genre_preferences_layout" />
+
+        <RelativeLayout
+            android:id="@+id/year_preferences_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/border_2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/start_end_margin"
+                android:text="@string/search_preferences_year_title"
+                android:textAppearance="@style/SearchPreferencesMainTextStyle" />
+
+            <TextView
+                android:id="@+id/year_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/start_end_margin"
+                android:textAppearance="@style/SearchPreferencesAdditionalTextStyle"
+                tools:ignore="RelativeOverlap"
+                tools:text="1998-2004" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/border_3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/year_preferences_layout" />
+
+        <RelativeLayout
+            android:id="@+id/rating_preferences_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginEnd="@dimen/start_end_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/border_3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="@string/search_preferences_rating_title"
+                android:textAppearance="@style/SearchPreferencesMainTextStyle" />
+
+            <TextView
+                android:id="@+id/rating_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:textAppearance="@style/SearchPreferencesAdditionalTextStyle"
+                tools:ignore="RelativeOverlap"
+                tools:text="любой" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.slider.RangeSlider
+            android:id="@+id/rating_slider"
+            style="@style/SearchPreferencesRangeSliderStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginEnd="@dimen/start_end_margin"
+            android:stepSize="0.1"
+            android:valueFrom="1.0"
+            android:valueTo="10.0"
+            app:labelBehavior="floating"
+            app:labelStyle="@style/Widget.MaterialComponents.Tooltip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rating_preferences_layout" />
+
+        <RelativeLayout
+            android:id="@+id/slider_markers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="35dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rating_slider">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/search_preferences_rating_indicator_from"
+                android:textAppearance="@style/SearchPreferencesAdditionalTextStyle" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:text="@string/search_preferences_rating_indicator_to"
+                android:textAppearance="@style/SearchPreferencesAdditionalTextStyle"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/border_4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/small_gap"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider_markers" />
+
+        <TextView
+            android:id="@+id/sort_type_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginTop="@dimen/small_gap"
+            android:text="@string/search_preferences_sort_title"
+            android:textAppearance="@style/AdditionalTextStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/border_4" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/sort_types_toggle_group"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/small_gap"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sort_type_title"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/date_sort_toggle"
+                style="@style/SearchPreferencesToggleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/search_preferences_date_sort_toggle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/popularity_sort_toggle"
+                style="@style/SearchPreferencesToggleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/search_preferences_popularity_sort_toggle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rating_sort_toggle"
+                style="@style/SearchPreferencesToggleStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/search_preferences_rating_sort_toggle" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        <View
+            android:id="@+id/border_5"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/light_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sort_types_toggle_group" />
+
+
+        <RelativeLayout
+            android:id="@+id/have_seen_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="@dimen/start_end_margin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/border_5">
+
+            <ImageView
+                android:id="@+id/have_seen_indicator_icon"
+                style="@style/SearchPreferencesSeenMarkerStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/icon_eye_closed"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/start_end_margin"
+                android:layout_marginEnd="74dp"
+                android:layout_toStartOf="@+id/have_seen_switch"
+                android:layout_toEndOf="@id/have_seen_indicator_icon"
+                android:text="@string/have_seen_marker"
+                android:textAppearance="@style/SearchPreferencesMainTextStyle" />
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/have_seen_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/start_end_margin"
+                android:checked="false"
+                app:thumbTint="@color/search_preferences_switch_thumb_color"
+                app:trackTint="@color/search_preferences_switch_track_color" />
+
+        </RelativeLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reset_preferences_button"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_gap"
+            android:text="@string/search_preferences_cancel_button"
+            app:layout_constraintEnd_toStartOf="@id/use_preferences_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/have_seen_layout" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/use_preferences_button"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_gap"
+            android:text="@string/search_preferences_use_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/reset_preferences_button"
+            app:layout_constraintTop_toBottomOf="@id/have_seen_layout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

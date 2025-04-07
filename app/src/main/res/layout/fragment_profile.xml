@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/viewedCollectionLayout"
+            style="@style/Base.Theme.Skillcinema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginTop="56dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/viewed_collection_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/have_seen_collection_title"
+                android:textAppearance="@style/TitleTextStyle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/viewedCollectionShowAllMoviesButton"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/viewed_collection_title"
+                android:layout_alignEnd="@id/viewed_collection_title"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="26dp"
+                android:gravity="end"
+                android:insetBottom="10dp"
+                android:textAppearance="@style/MainTextStyle"
+                android:textColor="@color/blue"
+                app:icon="@drawable/icon_caret_right"
+                app:iconGravity="end"
+                app:iconTint="@color/blue"
+                tools:text="20" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/viewedCollectionRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewed_collection_title"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:fadingEdge="vertical"
+                android:fadingEdgeLength="16dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_movie_card" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/otherLocalCollectionsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginTop="@dimen/biggest_gap"
+            android:layout_marginEnd="@dimen/start_end_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile_collections_title"
+                android:textAppearance="@style/TitleTextStyle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/createCollectionButton"
+                style="@style/ProfileCreateCollectionButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/small_gap"
+                android:text="@string/create_profile_collection_button_text"
+                android:textAppearance="@style/MainTextStyle"
+                app:icon="@drawable/icon_plus" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/otherLocalCollectionsRecyclerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/small_gap"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="2"
+                tools:itemCount="4"
+                tools:listitem="@layout/item_local_collections" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/interestingCollectionLayout"
+            style="@style/Base.Theme.Skillcinema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginTop="56dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/interesting_collection_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/profile_interesting_collection_title"
+                android:textAppearance="@style/TitleTextStyle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/interestingShowAllMoviesButton"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/interesting_collection_title"
+                android:layout_alignEnd="@id/interesting_collection_title"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="26dp"
+                android:gravity="end"
+                android:insetBottom="10dp"
+                android:textAppearance="@style/MainTextStyle"
+                android:textColor="@color/blue"
+                app:icon="@drawable/icon_caret_right"
+                app:iconGravity="end"
+                app:iconTint="@color/blue"
+                tools:text="15" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/interestingCollectionRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/interesting_collection_title"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="20dp"
+                android:fadingEdge="vertical"
+                android:fadingEdgeLength="16dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_movie_card" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

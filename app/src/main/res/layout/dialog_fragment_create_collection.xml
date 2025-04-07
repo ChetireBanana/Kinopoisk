@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/start_end_margin">
+
+    <RelativeLayout
+        android:id="@+id/create_collection_dialog_header"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="@string/create_collection_dialog_title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/close_button"
+            style="@style/BackButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:icon="@drawable/icon_cross"
+            tools:ignore="RelativeOverlap" />
+    </RelativeLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/collection_title_edit_text_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:endIconMode="custom"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/create_collection_dialog_header">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/collection_title_edit_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/create_collection_hint_edit_text"
+            android:textAppearance="@style/MainTextStyle" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/chose_icon_toggle_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_gap"
+        app:checkedButton="@+id/chose_profile_icon_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/collection_title_edit_text_layout"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/chose_profile_icon_button"
+            style="@style/CreateCollectionChoseIconButtonsStyle"
+            app:icon="@drawable/icon_profile" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/chose_heart_icon_button"
+            style="@style/CreateCollectionChoseIconButtonsStyle"
+            app:icon="@drawable/icon_heart" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/chose_bullhorn_icon_button"
+            style="@style/CreateCollectionChoseIconButtonsStyle"
+            app:icon="@drawable/icon_bullhorn" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/chose_fire_icon_button"
+            style="@style/CreateCollectionChoseIconButtonsStyle"
+            app:icon="@drawable/icon_fire" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/chose_university_icon_button"
+            style="@style/CreateCollectionChoseIconButtonsStyle"
+            app:icon="@drawable/icon_university" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/chose_lightbulb_icon_button"
+            style="@style/CreateCollectionChoseIconButtonsStyle"
+            app:icon="@drawable/icon_lightbulb" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/chose_bookmark_icon_button"
+            style="@style/CreateCollectionChoseIconButtonsStyle"
+            app:icon="@drawable/icon_bookmark" />
+
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <Button
+        android:id="@+id/create_collection_ready_button"
+        style="@style/ButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_gap"
+        android:enabled="false"
+        android:text="@string/ready_button_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chose_icon_toggle_group" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

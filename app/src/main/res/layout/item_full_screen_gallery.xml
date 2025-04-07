@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent">
+
+    <ImageView
+        android:id="@+id/full_screen_gallery_movie_scene"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        android:background="@drawable/rounded_outlines"
+        android:clipToOutline="true"
+        android:contentDescription="@string/filmpage_film_poster"
+        android:scaleType="fitCenter"
+        tools:ignore="UnusedAttribute"
+        tools:src="@tools:sample/avatars" />
+</RelativeLayout>
+

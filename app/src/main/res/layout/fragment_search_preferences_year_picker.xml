@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/top_panel"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/year_picker_title"
+                android:textAppearance="@style/ListPageTitleTextStyle" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/back_button"
+                style="@style/BackButtonStyle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_centerVertical="true"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/year_from_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginTop="@dimen/small_gap"
+            android:text="@string/year_picker_from_title"
+            android:textAppearance="@style/SearchPreferencesAdditionalTextStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/top_panel" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/year_from_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginTop="@dimen/small_gap"
+            android:layout_marginEnd="@dimen/start_end_margin"
+            android:background="@drawable/item_outline_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/year_from_text_view">
+
+            <TextView
+                android:id="@+id/year_from_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_gap"
+                android:layout_marginTop="@dimen/small_gap"
+                android:textAppearance="@style/YearPickerYearIndicatorTextAppearance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1998-2024" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/year_from_forward_button"
+                style="@style/YearPickerButtonStyle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="@dimen/small_gap"
+                android:layout_marginEnd="@dimen/small_gap"
+                app:icon="@drawable/icon_caret_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/year_from_backward_button"
+                style="@style/YearPickerButtonStyle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="@dimen/small_gap"
+                app:icon="@drawable/icon_caret_left"
+                app:layout_constraintEnd_toStartOf="@id/year_from_forward_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/year_from_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_marginStart="@dimen/start_end_margin"
+                android:layout_marginTop="@dimen/small_gap"
+                android:layout_marginEnd="@dimen/start_end_margin"
+                android:layout_marginBottom="@dimen/small_gap"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/year_from_indicator" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/year_to_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginTop="32dp"
+            android:text="@string/year_picker_to_title"
+            android:textAppearance="@style/SearchPreferencesAdditionalTextStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/year_from_layout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/year_to_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/start_end_margin"
+            android:layout_marginTop="@dimen/small_gap"
+            android:layout_marginEnd="@dimen/start_end_margin"
+            android:background="@drawable/item_outline_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/year_to_text_view">
+
+            <TextView
+                android:id="@+id/year_to_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/small_gap"
+                android:layout_marginTop="@dimen/small_gap"
+                android:textAppearance="@style/YearPickerYearIndicatorTextAppearance"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="1998-2024" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/year_to_forward_button"
+                style="@style/YearPickerButtonStyle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="@dimen/small_gap"
+                android:layout_marginEnd="@dimen/small_gap"
+                app:icon="@drawable/icon_caret_right"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/year_to_backward_button"
+                style="@style/YearPickerButtonStyle"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="@dimen/small_gap"
+                app:icon="@drawable/icon_caret_left"
+                app:layout_constraintEnd_toStartOf="@id/year_to_forward_button"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/year_to_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_marginStart="@dimen/start_end_margin"
+                android:layout_marginTop="@dimen/small_gap"
+                android:layout_marginEnd="@dimen/start_end_margin"
+                android:layout_marginBottom="@dimen/small_gap"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/year_to_indicator" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/accept_button"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_gap"
+            android:text="@string/search_preferences_accept_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/clear_choice_button"
+            app:layout_constraintTop_toBottomOf="@id/year_to_layout" />
+
+        <Button
+            android:id="@+id/clear_choice_button"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_gap"
+            android:text="@string/search_preferences_cancel_button"
+            app:layout_constraintEnd_toStartOf="@id/accept_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/year_to_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

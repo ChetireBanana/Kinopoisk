@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="dark_grey">#272727</color>
+    <color name="grey">#838390</color>
+    <color name="light_grey">#B5B5C9</color>
+    <color name="light_grey_transparent">#66B5B5C9</color>
+    <color name="blue">#3D3BFF</color>
+    <color name="blue_transparent">#663D3BFF</color>
+    <color name="black_for_gradient">#1B1B1B</color>
+    <color name="black_transparent">#7C000000</color>
+
+
+</resources>

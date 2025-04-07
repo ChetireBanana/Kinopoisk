@@ -1,0 +1,458 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.skillcinema.application.presentation.LoaderErrorView
+        android:id="@+id/loaderErrorView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/mainScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp">
+
+                    <ImageView
+                        android:id="@+id/film_poster"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:contentDescription="@string/filmpage_film_poster"
+                        android:foreground="@drawable/poster_gradient_filler"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        tools:src="@tools:sample/avatars" />
+
+                    <TextView
+                        android:id="@+id/film_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/start_end_margin"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:layout_marginBottom="13dp"
+                        android:gravity="center_horizontal"
+                        android:textColor="@color/light_grey"
+                        android:textSize="50sp"
+                        app:layout_constraintBottom_toTopOf="@id/rating_other_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:text="SkillSinema" />
+
+
+                    <ImageView
+                        android:id="@+id/filmLogo"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginStart="@dimen/start_end_margin"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:layout_marginBottom="12dp"
+                        android:contentDescription="@string/film_logo_description"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo_skillcinema"
+                        app:layout_constraintBottom_toTopOf="@id/rating_other_name"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.495"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/rating_other_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:textColor="@color/light_grey"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@id/year_genres_seasons"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:text="6,7, la vie en rose" />
+
+                    <TextView
+                        android:id="@+id/year_genres_seasons"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:textColor="@color/light_grey"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@id/country_length_age"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:text="2020, драма, приключения" />
+
+                    <TextView
+                        android:id="@+id/country_length_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/smallest_gap"
+                        android:textColor="@color/light_grey"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toTopOf="@id/button_panel"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:text="Россия, 1 час 30 мин, 16+" />
+
+                    <LinearLayout
+                        android:id="@+id/button_panel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/small_gap"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <com.google.android.material.button.MaterialButtonToggleGroup
+                            android:id="@+id/buttonPanelToggleGroup"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/addToFavouriteCollectionButton"
+                                style="@style/FilmPageButtonPanelToggleButtonsStyle"
+                                app:icon="@drawable/selector_icon_heart"
+                                app:singleLine="true" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/addToBookmarkCollectionButton"
+                                style="@style/FilmPageButtonPanelToggleButtonsStyle"
+                                app:icon="@drawable/icon_bookmark"
+                                app:singleLine="true" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/addToViewedCollectionButton"
+                                style="@style/FilmPageButtonPanelToggleButtonsStyle"
+                                app:icon="@drawable/selector_icon_eye"
+                                app:singleLine="true" />
+
+                        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/shareButton"
+                            style="@style/FilmPageButtonPanelSimpleButtonsStyle"
+                            app:icon="@drawable/icon_share" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/addToOtherCollectionButton"
+                            style="@style/FilmPageButtonPanelSimpleButtonsStyle"
+                            app:icon="@drawable/icon_dots_horizontal" />
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/shortDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/start_end_margin"
+                    android:layout_marginTop="@dimen/biggest_gap"
+                    android:layout_marginEnd="@dimen/start_end_margin"
+                    android:fontFamily="@font/graphik_medium"
+                    android:textAppearance="@style/MainTextStyle"
+                    tools:text="Хакер Нео узнает, что его мир — виртуальный. Выдающийся экшен, доказавший, что зрелищное кино может быть умным" />
+
+                <io.github.glailton.expandabletextview.ExpandableTextView
+                    android:id="@+id/longDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/start_end_margin"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="@dimen/start_end_margin"
+                    android:textAppearance="@style/MainTextStyle"
+                    app:animDuration="1000"
+                    app:collapsedLines="5"
+                    app:expandType="layout"
+                    app:isExpanded="false"
+                    app:readLessText="..."
+                    app:readMoreText="..."
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <RelativeLayout
+                    android:id="@+id/seasons_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/start_end_margin"
+                    android:layout_marginTop="@dimen/biggest_gap"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/title_seasons_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/seasons_and_series_title"
+                        android:textAppearance="@style/TitleTextStyle" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/showAllSeasonsButton"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/title_seasons_layout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:gravity="end"
+                        android:insetBottom="10dp"
+                        android:text="@string/show_all_button_text"
+                        android:textAppearance="@style/MainTextStyle"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        app:icon="@drawable/icon_caret_right"
+                        app:iconGravity="end"
+                        app:iconTint="@color/blue"
+                        tools:ignore="RelativeOverlap" />
+
+                    <TextView
+                        android:id="@+id/seasons_and_series_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title_seasons_layout"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="8dp"
+                        android:textAppearance="@style/AdditionalTextStyle"
+                        tools:text="1 сезон 7 серий" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/actorsLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/start_end_margin"
+                    android:layout_marginTop="@dimen/biggest_gap"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/title_actors_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/actors_list_title"
+                        android:textAppearance="@style/TitleTextStyle" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/showAllActorsButton"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/title_actors_layout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:gravity="end"
+                        android:insetBottom="10dp"
+                        android:textAppearance="@style/MainTextStyle"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:icon="@drawable/icon_caret_right"
+                        app:iconGravity="end"
+                        app:iconTint="@color/blue"
+                        tools:text="20" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/actorsListRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title_actors_layout"
+                        android:layout_marginTop="@dimen/middle_gap"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="4"
+                        tools:itemCount="6"
+                        tools:listitem="@layout/item_film_crew" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/creatorLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/start_end_margin"
+                    android:layout_marginTop="@dimen/biggest_gap"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/title_creator_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/crew_list_title"
+                        android:textAppearance="@style/TitleTextStyle" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/showAllCreatorsButton"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/title_creator_layout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:gravity="end"
+                        android:insetBottom="10dp"
+                        android:textAppearance="@style/MainTextStyle"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:icon="@drawable/icon_caret_right"
+                        app:iconGravity="end"
+                        app:iconTint="@color/blue"
+                        tools:text="20" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/creatorsListRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title_creator_layout"
+                        android:layout_marginTop="@dimen/middle_gap"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:spanCount="2"
+                        tools:itemCount="6"
+                        tools:listitem="@layout/item_film_crew" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/start_end_margin"
+                    android:layout_marginTop="@dimen/biggest_gap"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/title_gallery_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/title_gallery_layout"
+                        android:textAppearance="@style/TitleTextStyle" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/showAllGalleryButton"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/title_gallery_layout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:gravity="end"
+                        android:insetBottom="10dp"
+                        android:text="@string/show_all_button_text"
+                        android:textAppearance="@style/MainTextStyle"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:icon="@drawable/icon_caret_right"
+                        app:iconGravity="end"
+                        app:iconTint="@color/blue" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/galleryListRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="108dp"
+                        android:layout_below="@id/title_gallery_layout"
+                        android:layout_marginTop="@dimen/middle_gap"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/item_images_filmpage" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/similarMoviesLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/start_end_margin"
+                    android:layout_marginTop="@dimen/biggest_gap"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/title_similar_movies_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/similar_films_list_title"
+                        android:textAppearance="@style/TitleTextStyle" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/showAllSimilarMoviesButton"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@id/title_similar_movies_layout"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/start_end_margin"
+                        android:gravity="end"
+                        android:insetBottom="10dp"
+                        android:textAppearance="@style/MainTextStyle"
+                        android:textColor="@color/blue"
+                        android:textStyle="bold"
+                        android:visibility="gone"
+                        app:icon="@drawable/icon_caret_right"
+                        app:iconGravity="end"
+                        app:iconTint="@color/blue"
+                        tools:text="4" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/similarMoviesListRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/title_similar_movies_layout"
+                        android:layout_marginTop="@dimen/middle_gap"
+                        android:orientation="horizontal"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="5"
+                        tools:listitem="@layout/item_movie_card" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/back_button"
+            style="@style/Widget.Material3.Button.IconButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/back_button_description"
+            android:src="@drawable/icon_caret_left"
+            app:backgroundTint="@color/light_grey_transparent"
+            app:borderWidth="1dp"
+            app:tint="@color/dark_grey"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

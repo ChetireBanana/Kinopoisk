@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_width="111dp"
+    android:layout_height="156dp"
+    android:layout_alignParentStart="true"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:id="@+id/item_movie_collection_footer_layout">
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/item_movie_collection_footer_button"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:contentDescription="@string/film_card_fab_description"
+        app:fabCustomSize="32dp"
+        android:backgroundTint="@color/white"
+        app:srcCompat="@drawable/icon_arrow_right"
+        app:tint="@color/blue"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/last_element_plaseholder_text"
+        android:textAppearance="@style/MainTextStyle"
+        android:gravity="center" />
+</LinearLayout>

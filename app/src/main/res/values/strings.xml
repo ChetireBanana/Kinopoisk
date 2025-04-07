@@ -1,0 +1,173 @@
+<resources>
+    <string name="app_name">Skillcinema</string>
+    <string name="onboarding_skip_button">Пропустить</string>
+    <string name="show_all_button_text">Все</string>
+
+    <string name="last_element_plaseholder_text">Показать\nвсё</string>
+
+    <!--    Панель навигации-->
+    <string name="title_item_home_bottom_nav">Home</string>
+    <string name="title_item_search_bottom_nav">Search</string>
+    <string name="title_item_profile_bottom_nav">Profile</string>
+
+    <!--    Homepage and film collections-->
+    <string name="movie_api_error">Не удалось получить %s!</string>
+    <string name="movie_description_error_add">Описание фильма</string>
+    <string name="season_information_error_add">Информацию о сезонах</string>
+    <string name="premiers_collection_title">Премьеры</string>
+    <string name="crew_api_error">Cписок актёров и создателей</string>
+    <string name="top_popular_movies_collection_title">Популярные фильмы</string>
+    <string name="top_250_movies_collection_title">Топ 250 фильмов</string>
+    <string name="popular_serials_title">Популярные сериалы</string>
+
+    <!--    FilmPage-->
+    <string name="actors_list_title">В фильме снимались</string>
+    <string name="crew_list_title">Над фильмом работали</string>
+    <string name="title_gallery_layout">Галерея</string>
+    <string name="seasons_and_series_title">Сезоны и Серии</string>
+    <string name="similar_films_list_title">Похожие фильмы</string>
+
+    <string name="bottom_sheets_dialog_title">Ошибка</string>
+
+    <plurals name="seasons_description">
+        <item quantity="zero">%d сезонов</item>
+        <item quantity="one">%d сезон</item>
+        <item quantity="two">%d сезона</item>
+        <item quantity="few">%d сезонов</item>
+        <item quantity="many">%d сезонов</item>
+        <item quantity="other">%d сезонов</item>
+    </plurals>
+
+    <plurals name="episodes_description">
+        <item quantity="zero">%d серий</item>
+        <item quantity="one">%d серия</item>
+        <item quantity="two">%d серии</item>
+        <item quantity="few">%d серий</item>
+        <item quantity="many">%d серий</item>
+        <item quantity="other">%d серий</item>
+    </plurals>
+
+    <plurals name="filmography_description">
+        <item quantity="zero">%d фильмов</item>
+        <item quantity="one">%d фильм</item>
+        <item quantity="two">%d фильма</item>
+        <item quantity="few">%d фильма</item>
+        <item quantity="many">%d фильмов</item>
+        <item quantity="other">%d фильмов</item>
+    </plurals>
+
+    <!--    StaffPersonalPage-->
+    <string name="get_person_info_api_error">информацию о участнике</string>
+    <string name="staff_personal_page_title">Лучшее</string>
+
+    <!--    Gallery-->
+    <string name="gallery_error">галлерею изображений</string>
+
+
+    <!--    Descriptions-->
+    <string name="movie_card_film_poster_description">Film poster</string>
+    <string name="hav_seen_marker_description">HavSeen icon</string>
+    <string name="image_loader_description">Image shown during loading, a person in front of tv</string>
+    <string name="film_card_fab_description">Show all button</string>
+    <string name="item_actor_photo">Фотография Актёра</string>
+    <string name="filmpage_film_poster">Film Poster</string>
+    <string name="show_filmography_personal_staff_page">К списку</string>
+    <string name="filmography_title_personal_page">Фильмография</string>
+
+    <string name="no_name">Безимянный</string>
+    <string name="filmography_title">Фильмография</string>
+    <string name="filmography_api_error_message">фильмографию</string>
+    <string name="profession_key_writer">Сценарист</string>
+    <string name="profession_key_operator">Оператор</string>
+    <string name="profession_key_editor">Редактор</string>
+    <string name="profession_key_composer">Композитор</string>
+    <string name="profession_key_produsser_ussr">Продюссер СССР</string>
+    <string name="profession_key_himself">Играет сам себя</string>
+    <string name="profession_key_herself">Играет сам себя</string>
+    <string name="profession_key_titr_male">Редактор субтитров</string>
+    <string name="profession_key_titr_female">Редактор субтитров</string>
+    <string name="profession_key_translator">Переводчик</string>
+    <string name="profession_key_director">Режиссер</string>
+    <string name="profession_key_designer">Дизайнер</string>
+    <string name="profession_key_producer">Продюсер</string>
+    <string name="profession_key_actor">Актёр</string>
+    <string name="profession_key_voice_director">Режисёр озвучания</string>
+    <string name="profession_key_unknown">Неизвестно</string>
+    <string name="images_type_still">Кадры</string>
+    <string name="images_type_shooting">Изображения со съемок</string>
+    <string name="images_type_poster">Постеры</string>
+    <string name="images_type_fan_art">Фан-арт</string>
+    <string name="images_type_promo">Промо</string>
+    <string name="images_type_concept">Концепт-арты</string>
+    <string name="images_type_wallpaper">Обои</string>
+    <string name="images_type_cover">Обложки</string>
+    <string name="images_type_screenshot">Скриншоты</string>
+    <string name="images_type_unknown">Неизвестно</string>
+    <string name="view_loader_error_message">Произошла ошибка попробуйте вернуться позже</string>
+    <string name="view_loader_back_button">Вернуться</string>
+    <string name="seasons_fragment_title">Сезон</string>
+    <string name="seasons_api_error">список сезонов и серий</string>
+    <string name="seasons_fragment_episode_number">%1$s серия</string>
+    <string name="episode_name_no_name">Без названия</string>
+    <string name="edit_text_hint">Фильмы, актёры, режисёры</string>
+    <string name="back_button_description">BackButton</string>
+    <string name="film_logo_description">film_logo</string>
+    <string name="search_failed_placeholder_text">К сожалению, по вашему запросу ничего не найдено</string>
+    <string name="search_preferences_title">Настройки поиска</string>
+    <string name="search_preferences_film_type_toggle_all">Все</string>
+    <string name="search_preferences_film_type_toggle_films">Фильмы</string>
+    <string name="search_preferences_film_type_toggle_serials">Сериалы</string>
+    <string name="search_preferences_chose_film_type_title">Показывать</string>
+    <string name="search_preferences_country_title">Cтрана</string>
+    <string name="search_preferences_genre_title">Жанр</string>
+    <string name="search_preferences_year_title">Год</string>
+    <string name="search_preferences_rating_title">Рейтинг</string>
+    <string name="have_seen_marker">Скрыть просмотренные</string>
+    <string name="search_preferences_use_button">Применить</string>
+    <string name="year_picker_from_title">Искать в период с</string>
+    <string name="year_picker_to_title">Искать в период по</string>
+    <string name="year_picker_title">Период</string>
+    <string name="search_preferences_country_any">Любая</string>
+    <string name="share_preferences_genre_any">Любой</string>
+    <string name="search_preferences_accept_button">Применить</string>
+    <string name="search_preferences_cancel_button">Сбросить</string>
+    <string name="search_preferences_rating_indicator_text">от %1$s до %2$s</string>
+    <string name="search_preferences_year_indicator_any">Любой</string>
+    <string name="search_bar_icon_description">search_bar_icon</string>
+    <string name="genre_picker_hint">Введите жанр</string>
+    <string name="list_of_genre_and_countries_api_error">список жанров и стран</string>
+    <string name="country_picker_search_hint">Введите название страны</string>
+    <string name="view_start_placeholder_text_search_fragment">Для поиска введите название фильма или воспользуйтесь фильтрами</string>
+    <string name="search_fragment_searchresults_error">результаты поиска</string>
+    <string name="search_preferences_rating_indicator_from">1</string>
+    <string name="search_preferences_rating_indicator_to">10</string>
+    <string name="search_preferences_sort_title">Сортировать</string>
+    <string name="search_preferences_date_sort_toggle">Дата</string>
+    <string name="search_preferences_popularity_sort_toggle">Популярность</string>
+    <string name="search_preferences_rating_sort_toggle">Рейтинг</string>
+    <string name="clear_history">Очистить историю</string>
+    <string name="clear_history_button_description">Кнопка очистить историю</string>
+    <string name="have_seen_collection_title">Просмотренно</string>
+    <string name="profile_collections_title">Коллекции</string>
+    <string name="create_profile_collection_button_text">Создать свою коллекцию</string>
+    <string name="profile_interesting_collection_title">Вам было интересно</string>
+    <string name="close_button_description">Close button</string>
+    <string name="actor_photo_description">Фотография Актёра</string>
+    <string name="clear_local_collection_button_description">Clear local collection button</string>
+    <string name="empty_local_collection_placeholder">Коллекция пуста</string>
+    <string name="ready_button_text">Готово</string>
+    <string name="share_dialog_title">Поделиться ссылкой</string>
+    <string name="add_to_other_collection_button">Добавить в коллекцию</string>
+    <string name="bottom_dialog_add_to_collection_footer_text">Создать новую коллекцию</string>
+    <string name="bottom_dialog_add_to_collection_footer_icon_description">bottom_dialog_add_to_collection_footer_icon</string>
+    <string name="filmography_cant_get_name_error_text">Имя Актёра</string>
+    <string name="skillcinema_logo_description">Skillcinema logo</string>
+    <string name="create_collection_hint_edit_text">Название вашей коллекции</string>
+    <string name="person_photo">Person photo</string>
+    <string name="search_preferences_button_desription">Search preferences button</string>
+    <string name="delete_button_description">Delete button</string>
+    <string name="create_collection_dialog_title">Создайте коллекцию</string>
+    <string name="loader_refresh_button">Обновить</string>
+
+
+</resources>

@@ -1,0 +1,239 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Skillcinema" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="android:fontFamily">@font/graphik_regular</item>
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.Skillcinema" parent="Base.Theme.Skillcinema" />
+
+    <style name="BackButtonStyle" parent="Widget.Material3.Button.IconButton">
+
+        <item name="icon">@drawable/icon_caret_left</item>
+        <item name="iconSize">24dp</item>
+        <item name="iconTint">@color/dark_grey</item>
+    </style>
+
+    <style name="BottomPanel" parent="Base.Theme.Skillcinema">
+        <item name="android:background">@drawable/bottom_panel</item>
+        <item name="android:elevation">15dp</item>
+        <item name="android:paddingStart">50dp</item>
+        <item name="android:paddingEnd">50dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="itemIconTint">@color/color_bottom_menu_icon</item>
+        <item name="itemRippleColor">@color/blue_transparent</item>
+        <item name="itemActiveIndicatorStyle">@color/white</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+    </style>
+
+    <style name="BottomDialog" parent="Base.Theme.Skillcinema">
+        <item name="android:background">@drawable/bottom_panel</item>
+    </style>
+
+    <style name="FilmPageButtonPanelToggleButtonsStyle" parent="@style/Widget.Material3.Button.IconButton">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconSize">24dp</item>
+        <item name="iconTint">@color/selector_icon_color_black_blue</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="FilmPageButtonPanelSimpleButtonsStyle" parent="@style/Widget.Material3.Button.IconButton">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconSize">24dp</item>
+        <item name="iconTint">@color/selector_icon_color_film_page_simple_buttons</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="TitleTextStyle" parent="Base.Theme.Skillcinema">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="fontFamily">@font/graphik_bold</item>
+    </style>
+
+    <style name="ListPageTitleTextStyle" parent="TitleTextStyle">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="MainTextStyle" parent="Base.Theme.Skillcinema">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="SearchPreferencesMainTextStyle" parent="Base.Theme.Skillcinema">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="SearchPreferencesAdditionalTextStyle" parent="Base.Theme.Skillcinema">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/light_grey</item>
+    </style>
+
+    <style name="SearchPreferencesSeenMarkerStyle" parent="Base.Theme.Skillcinema">
+        <item name="android:tint">@color/dark_grey</item>
+    </style>
+
+    <style name="YearPickerTextAppearance" parent="Base.Theme.Skillcinema">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_grey</item>
+    </style>
+
+    <style name="YearPickerYearIndicatorTextAppearance" parent="YearPickerTextAppearance">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="YearPickerButtonStyle" parent="Widget.Material3.Button.IconButton">
+        <item name="iconTint">@color/selector_year_picker_button_color</item>
+        <item name="android:padding">0dp</item>
+        <item name="iconSize">24dp</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+
+
+    <style name="AdditionalTextStyle" parent="Base.Theme.Skillcinema">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="StaffPersonalPageName" parent="Base.Theme.Skillcinema">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="FilmographyTabLayoutStyle" parent="Base.Theme.Skillcinema">
+        <item name="android:background">@null</item>
+        <item name="tabBackground">@drawable/tab_background_selected_false</item>
+        <item name="tabIndicatorGravity">center</item>
+        <item name="tabIndicatorHeight">36dp</item>
+        <item name="tabIndicatorFullWidth">true</item>
+        <item name="tabIndicatorAnimationMode">elastic</item>
+        <item name="tabIndicatorColor">@null</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabGravity">center</item>
+        <item name="tabPaddingBottom">4dp</item>
+        <item name="tabTextColor">@color/dark_grey</item>
+        <item name="tabIndicator">@drawable/tab_background_selected_true</item>
+        <item name="tabMode">auto</item>
+    </style>
+
+    <style name="FilmographyTabTextAppearance" parent="Base.Theme.Skillcinema">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="GalleryDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">99%</item>
+        <item name="android:windowMinWidthMinor">99%</item>
+        <item name="android:windowBackground">@drawable/gallery_dialog_backgrounded</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="SearchPreferencesToggleStyle" parent="Base.Theme.Skillcinema">
+        <item name="android:textAppearance">@style/MainTextStyle</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/selector_search_preferences_text_color</item>
+        <item name="strokeColor">@color/dark_grey</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="backgroundTint">@color/selector_search_preferences_toggle_background_color
+        </item>
+    </style>
+
+    <style name="SearchPreferencesRangeSliderStyle" parent="Base.Theme.Skillcinema">
+        <item name="thumbColor">@color/white</item>
+        <item name="thumbHeight">24dp</item>
+        <item name="thumbStrokeColor">@color/dark_grey</item>
+        <item name="thumbStrokeWidth">1dp</item>
+        <item name="thumbWidth">24dp</item>
+        <item name="haloRadius">30dp</item>
+        <item name="haloColor">@color/blue_transparent</item>
+        <item name="tickVisible">false</item>
+        <item name="trackColorActive">@color/blue</item>
+        <item name="trackColorInactive">@color/grey</item>
+        <item name="trackHeight">4dp</item>
+    </style>
+
+    <style name="ButtonStyle" parent="Base.Theme.Skillcinema">
+        <item name="android:textAppearance">@style/SearchPreferencesMainTextStyle</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/selector_button_background_tint</item>
+    </style>
+
+    <style name="ProfileCreateCollectionButtonStyle" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/dark_grey</item>
+        <item name="iconTint">@color/dark_grey</item>
+        <item name="android:gravity">start|center_vertical</item>
+        <item name="iconPadding">@dimen/small_gap</item>
+    </style>
+
+    <style name="ProfileCollectionsIconStyle" parent="Base.Theme.Skillcinema">
+        <item name="tint">@color/dark_grey</item>
+    </style>
+
+    <style name="ProfileCollectionsSizeIndicatorStyle" parent="Base.Theme.Skillcinema">
+        <item name="android:background">@drawable/item_profile_collections_quantity_indicator_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="android:paddingEnd">5dp</item>
+        <item name="android:textAppearance">@style/MainTextStyle</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="ProfileCollectionDeleteButtonStyle" parent="Widget.Material3.Button.IconButton" >
+        <item name="android:padding">0dp</item>
+        <item name="iconTint">@color/dark_grey</item>
+    </style>
+
+    <style name="CreateCollectionChoseIconButtonsStyle" parent="@style/Widget.Material3.Button.IconButton">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="iconPadding">0dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconSize">24dp</item>
+        <item name="iconTint">@color/selector_create_collection_dialog_chose_icons</item>
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="AddToOtherCollectionCheckBoxStyle" parent="@style/Widget.Material3.CompoundButton.CheckBox">
+        <item name="buttonTint">@color/add_to_other_collection_check_box_color</item>
+        <item name="android:button">@drawable/bottom_dialog_check_box</item>
+    </style>
+
+    <style name="AddToOtherCollectionIconStyle" parent="Base.Theme.Skillcinema">
+        <item name="tint">@color/dark_grey</item>
+    </style>
+
+    <style name="LogoColorStyle"  parent="Base.Theme.Skillcinema">
+        <item name="tint">@color/dark_grey</item>
+    </style>
+
+    <style name="LoaderWormDotsStyle">
+        <item name="dotsColor">@color/black</item>
+        <item name="dotsCornerRadius">4dp</item>
+        <item name="dotsSize">8dp</item>
+        <item name="dotsSpacing">2dp</item>
+        <item name="dotsStrokeColor">@color/light_grey</item>
+    </style>
+
+
+
+</resources>

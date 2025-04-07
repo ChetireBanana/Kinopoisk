@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="111dp"
+    android:layout_height="156dp"
+    android:layout_alignParentStart="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/item_local_base_collection_footer_clear_history_button"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/clear_history_button_description"
+            app:fabCustomSize="32dp"
+            android:backgroundTint="@color/white"
+            app:srcCompat="@drawable/icon_trash"
+            app:tint="@color/blue"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear_history"
+            android:gravity="center"
+            android:textAppearance="@style/MainTextStyle"
+            android:fontFamily="@font/graphik_regular" />
+</LinearLayout>

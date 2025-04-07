@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "624126314176",
+    "project_id": "skillsinema",
+    "storage_bucket": "skillsinema.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624126314176:android:a187ba1af9ed6d8c208f25",
+        "android_client_info": {
+          "package_name": "com.example.skillcinema"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuq8zTagmGIjQomdDRmzCambAbCS64JSg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

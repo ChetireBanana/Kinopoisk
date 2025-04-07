@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie_scene"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_outlines"
+    android:scaleType="fitCenter"
+    android:clipToOutline="true"
+    tools:src="@tools:sample/avatars"
+    tools:ignore="ContentDescription,UnusedAttribute" />
